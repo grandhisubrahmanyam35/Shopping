@@ -1,3 +1,5 @@
+import userTypes from './user.types';
+
 const defaultState = {
     userId: 1,
     userInfo: {}
@@ -5,7 +7,7 @@ const defaultState = {
 
 const userReducer = (currentState = defaultState, action) => {
     switch(action.type) {
-        case 'set_user_id':
+        case userTypes.set_user_id:
             return {
                 ...currentState,
                 userId: action.payload,
